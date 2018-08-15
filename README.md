@@ -62,14 +62,14 @@ The HTTP API is very simple, but there is a client to make interaction even easi
 TODO
 ----
 
-[ ] add persistent configuration to interfaces to bind
-[ ] add persistent configuration to ports to bind
-[ ] add flags to configure interfaces to bind
-[ ] add flags to configure ports to bind
-[ ] add authentication
-[ ] add authorization
-[ ] persist Quotes into a database (actually Quotes is stored only in memory)
-[ ] add Votes to Quotes (:+1: and :-1:)
+* [ ] add persistent configuration to interfaces to bind
+* [ ] add persistent configuration to ports to bind
+* [ ] add flags to configure interfaces to bind
+* [ ] add flags to configure ports to bind
+* [ ] add authentication
+* [ ] add authorization
+* [ ] persist Quotes into a database (actually Quotes is stored only in memory)
+* [ ] add Votes to Quotes (:+1: and :-1:)
 
 License
 =======
