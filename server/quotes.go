@@ -18,7 +18,7 @@ func Quotes(w http.ResponseWriter, r *http.Request) {
 	case http.MethodGet:
 		strQuoteId := r.URL.Path[len("/quotes/"):]
 		if strQuoteId == "list" {
-			quotes = types.Quotes()
+			quotes = types.ListQuotes()
 			response, _ := json.Marshal(quotes)
 			w.Write(response)
 			return

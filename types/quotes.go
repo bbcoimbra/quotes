@@ -28,7 +28,7 @@ func DelQuote(id int) {
 	}
 }
 
-func Quotes() []Quote {
+func ListQuotes() []Quote {
 	qs := make([]Quote, 0, len(quotes))
 	for _, quote := range quotes {
 		qs = append(qs, quote)
