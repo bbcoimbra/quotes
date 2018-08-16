@@ -2,6 +2,12 @@ package cmd
 
 import (
 	"github.com/spf13/cobra"
+	"github.com/spf13/viper"
+)
+
+var (
+	ServerURL string
+	QuotePath string
 )
 
 var clientCmd = &cobra.Command{
@@ -12,4 +18,6 @@ var clientCmd = &cobra.Command{
 
 func init() {
 	rootCmd.AddCommand(clientCmd)
+	ServerURL = viper.GetString("client.api_endpoint")
+	QuotePath = "/quotes/"
 }

@@ -6,6 +6,7 @@ import (
 
 	"github.com/bbcoimbra/quotes/server"
 	"github.com/spf13/cobra"
+	"github.com/spf13/viper"
 )
 
 var serverCmd = &cobra.Command{
@@ -15,7 +16,7 @@ var serverCmd = &cobra.Command{
 configuration for this setting yet`,
 	Run: func(cmd *cobra.Command, args []string) {
 		http.HandleFunc("/quotes/", handler.Quotes)
-		log.Fatal(http.ListenAndServe(":8080", nil))
+		log.Fatal(http.ListenAndServe(viper.GetString("server.listen"), nil))
 	},
 }
 

@@ -30,6 +30,9 @@ func Execute() {
 func init() {
 	cobra.OnInitialize(initConfig)
 	rootCmd.PersistentFlags().StringVar(&cfgFile, "config", "", "config file (default is $HOME/.quotes.yaml)")
+
+	viper.SetDefault("server.listen", "localhost:8888")
+	viper.SetDefault("client.api_endpoint", "http://localhost:8888")
 }
 
 // initConfig reads in config file and ENV variables if set.
